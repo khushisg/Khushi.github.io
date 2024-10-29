@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Gradient background for the main container */
+    .gradient-bg {
+      background: linear-gradient(135deg, #4c51bf 50%, #e2e8f0 50%);
+    }
+    /* Style for circular icon background */
+    .icon-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body class="bg-gray-200 flex justify-center items-center min-h-screen">
+
+  <div class="gradient-bg text-white py-10 px-5 rounded-lg shadow-lg max-w-6xl mx-auto">
+
+    <!-- Title -->
+    <div class="text-center mb-8">
+      <h1 class="text-3xl font-bold">Our Services</h1>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+      <!-- Emergency Plumbing Services -->
+      <div class="service-box p-6 bg-white text-gray-800 rounded-lg shadow-lg text-center transform transition duration-500">
+        <div class="icon-circle bg-indigo-100 mb-4">
+          <i class="fas fa-bell text-red-500 text-2xl"></i>
+        </div>
+        <h2 class="text-xl font-semibold mb-2">Emergency Plumbing Services</h2>
+        <p class="text-gray-600">Our plumbers are ready to go 24/7 for emergencies - including nights, weekends and holidays.</p>
+        <a href="#" class="text-blue-600 font-semibold mt-4 inline-block">Explore This Service &gt;</a>
+      </div>
+
+      <!-- Plumbing and Drains -->
+      <div class="service-box p-6 bg-white text-gray-800 rounded-lg shadow-lg text-center transform transition duration-500">
+        <div class="icon-circle bg-indigo-100 mb-4">
+          <i class="fas fa-tools text-blue-500 text-2xl"></i>
+        </div>
+        <h2 class="text-xl font-semibold mb-2">Plumbing and Drains</h2>
+        <p class="text-gray-600">As the largest plumbing and drain service company, we make thousands of repairs every day.</p>
+        <a href="#" class="text-blue-600 font-semibold mt-4 inline-block">Explore This Service &gt;</a>
+      </div>
+
+      <!-- Water Damage -->
+      <div class="service-box p-6 bg-white text-gray-800 rounded-lg shadow-lg text-center transform transition duration-500">
+        <div class="icon-circle bg-indigo-100 mb-4">
+          <i class="fas fa-tint text-blue-400 text-2xl"></i>
+        </div>
+        <h2 class="text-xl font-semibold mb-2">Water Damage</h2>
+        <p class="text-gray-600">Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p>
+        <a href="#" class="text-blue-600 font-semibold mt-4 inline-block">Explore This Service &gt;</a>
+      </div>
+
+      <!-- Water Heaters -->
+      <div class="service-box p-6 bg-white text-gray-800 rounded-lg shadow-lg text-center transform transition duration-500">
+        <div class="icon-circle bg-indigo-100 mb-4">
+          <i class="fas fa-fire text-red-500 text-2xl"></i>
+        </div>
+        <h2 class="text-xl font-semibold mb-2">Water Heaters</h2>
+        <p class="text-gray-600">Trust Roto-Rooter for repair and replacement of gas, electric and tankless water heaters.</p>
+        <a href="#" class="text-blue-600 font-semibold mt-4 inline-block">Explore This Service &gt;</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // GSAP Rotation Animation on Hover
+    document.querySelectorAll('.service-box').forEach(box => {
+      box.addEventListener('mouseenter', () => {
+        gsap.to(box, { rotationY: 360, duration: 1 });
+      });
+      box.addEventListener('mouseleave', () => {
+        gsap.to(box, { rotationY: 0, duration: 1 });
+      });
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
